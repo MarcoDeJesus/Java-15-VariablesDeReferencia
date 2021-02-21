@@ -14,10 +14,12 @@ public class Main {
         Sala salaModular = new Sala("Pavia");
         incrementarSillones(salaModular);
         System.out.println("El número de sillones para la Sala Modular es: " + salaModular.numeroDeSillones);
+        System.out.println(salaModular);
 
         Sala salaVictoria = salaModular;
         incrementarSillones(salaVictoria);
         System.out.println("El número de sillones para la Sala Victoria es: " + salaVictoria.numeroDeSillones);
+        System.out.println(salaVictoria);
 
     }
 
@@ -46,5 +48,11 @@ class Sala{
         this.numeroDeSillones = numeroDeSillones;
     }
 
-    // Sobreescribir el método toString()
+    @Override
+    public String toString() {
+        return "Sala{" +
+                "numeroDeSillones=" + numeroDeSillones +
+                ", nombre='" + nombre + '\'' +
+                '}';
+    }
 }
